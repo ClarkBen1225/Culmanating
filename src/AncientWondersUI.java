@@ -151,6 +151,15 @@ public class AncientWondersUI extends javax.swing.JFrame {
       } else if(n1==2){
          this.setVisible(false);
            new hangingGardens().setVisible(true); 
+      } else if(n1==3){
+      this.setVisible(false);
+        new giza().setVisible(true);
+      } else if(n1==4){
+         this.setVisible(false);
+        new lighthouseofAlexandria().setVisible(true); 
+      } else if(n1==5){
+         this.setVisible(false);
+        new templeArtemis().setVisible(true); 
       }
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -204,7 +213,7 @@ public class AncientWondersUI extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 public static int random(){
-        int max = 3;
+        int max = 6;
         int min = 1;
         int range = max - min + 1;
         double next = Math.round(Math.random()*range);
