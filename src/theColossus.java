@@ -1,9 +1,15 @@
-
+/*
+ * Ancient Wonders Educational
+ *         By:Ben.C
+ * This is an educational program to teach users 
+ * about the amazing 7 wonders of the ancient wonder
+ * The program teaches the user and then asks them questions based
+ * on what they have just learned
+ */
 public class theColossus extends javax.swing.JFrame {
 
-    /**
-     * Creates new form theColossus
-     */
+    static int score = 0;
+    
     public theColossus() {
         initComponents();
     }
@@ -41,6 +47,7 @@ public class theColossus extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Colossus 2.jpg"))); // NOI18N
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(176, 141, 87));
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
@@ -170,10 +177,12 @@ public class theColossus extends javax.swing.JFrame {
 
     private void checkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBtnActionPerformed
    String answer = answerField.getText();
-   int score = 0;
+  
    if((answer.equals("Earthquake") || (answer.equals("earthquake")))) {
    score++;
-   correctLbl.setText(String.valueOf(score));
+   correctLbl.setText("Score: "+String.valueOf(score));
+   } else{
+       correctLbl.setText("Incorrect");
    }
 
     }//GEN-LAST:event_checkBtnActionPerformed

@@ -1,7 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Ancient Wonders Educational
+ *         By:Ben.C
+ * This is an educational program to teach users 
+ * about the amazing 7 wonders of the ancient wonder
+ * The program teaches the user and then asks them questions based
+ * on what they have just learned
  */
 
 /**
@@ -46,6 +49,7 @@ public class hangingGardens extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Hanging Gardens2.jpg"))); // NOI18N
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(58, 95, 11));
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
@@ -156,10 +160,12 @@ public class hangingGardens extends javax.swing.JFrame {
 
     private void checkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBtnActionPerformed
         String answer = answerField.getText();
-   int score = 0;
+   
    if((answer.equals("Babylon") || (answer.equals("babylon")))) {
-   score++;
-   correctLbl.setText(String.valueOf(score));
+   theColossus.score++;
+   correctLbl.setText("Score:" + String.valueOf(theColossus.score));
+   } else{
+       correctLbl.setText("Incorrect");
    }
     }//GEN-LAST:event_checkBtnActionPerformed
 
